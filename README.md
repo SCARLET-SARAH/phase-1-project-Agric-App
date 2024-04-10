@@ -9,7 +9,7 @@ Its a simple blog app
   - Download zip in the code section of github to your desired folder
   - Extract the files
   - Open the folder with vs code.
-  - Then run "json-server --watch database.json" to run our server.
+  - Then run "json-server --watch db.json" to run our server.
   - Then run your index.html by either using the "GO LIVE" extension or by double clicking of the index.html
   - And your application is running.
 
@@ -24,7 +24,6 @@ Its a simple blog app
 ##Technologies used
    - JS
    - HTML and CSS
-   - Fontawesome
    - BOOTSRAP
 
 ##Support and contact details
