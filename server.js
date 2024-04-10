@@ -10,6 +10,7 @@ const dbPath = './db.json';
 let blogPosts = [];
 
 // Load blog posts from db.json
+
 function loadBlogPosts() {
   const rawData = fs.readFileSync(dbPath);
   const data = JSON.parse(rawData);
@@ -17,6 +18,7 @@ function loadBlogPosts() {
 }
 
 // Save blog posts to db.json
+
 function saveBlogPosts() {
   const data = { blogposts: blogPosts };
   const jsonData = JSON.stringify(data, null, 2);
@@ -24,11 +26,13 @@ function saveBlogPosts() {
 }
 
 // Get all blog posts
+
 app.get('/blogposts', (req, res) => {
   res.json(blogPosts);
 });
 
 // Get a single blog post by id
+
 app.get('/blogposts/:id', (req, res) => {
   const id = parseInt(req.params.id);
   const post = blogPosts.find((post) => post.id === id);
@@ -40,6 +44,7 @@ app.get('/blogposts/:id', (req, res) => {
 });
 
 // Create a new blog post
+
 app.post('/blogposts', (req, res) => {
   const post = req.body;
   blogPosts.push(post);
@@ -48,6 +53,7 @@ app.post('/blogposts', (req, res) => {
 });
 
 // Update a blog post by id
+
 app.put('/blogposts/:id', (req, res) => {
   const id = parseInt(req.params.id);
   const post = req.body;
@@ -62,6 +68,7 @@ app.put('/blogposts/:id', (req, res) => {
 });
 
 // Delete a blog post by id
+
 app.delete('/blogposts/:id', (req, res) => {
   const id = parseInt(req.params.id);
   const index = blogPosts.findIndex((p) => p.id === id);
@@ -75,6 +82,7 @@ app.delete('/blogposts/:id', (req, res) => {
 });
 
 // Load blog posts when the server starts
+
 loadBlogPosts();
 
 app.listen(3000, () => {
