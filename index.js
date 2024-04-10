@@ -7,15 +7,20 @@ async function getBlogPosts() {
   
   // Display blog posts
   function displayBlogPosts(blogPosts) {
+
     // Implement display logic here
+
   }
   
   // View a blog post
   function viewPost(id) {
+
     // Implement view logic here
+
   }
   
   // Create a new blog post
+
   async function createPost(title, content, image) {
     const response = await fetch('http://localhost:3000/blogposts', {
       method: 'POST',
@@ -33,6 +38,7 @@ async function getBlogPosts() {
   }
   
   // Update a blog post
+
   async function updatePost(id, title, content, image) {
     const response = await fetch(`http://localhost:3000/blogposts/${id}`, {
       method: 'PUT',
@@ -50,6 +56,7 @@ async function getBlogPosts() {
   }
   
   // Delete a blog post
+
   async function deletePost(id) {
     const response = await fetch(`http://localhost:3000/blogposts/${id}`, {
       method: 'DELETE',
@@ -59,6 +66,7 @@ async function getBlogPosts() {
   }
   
   // Event listener for creating a new blog post
+
   document.getElementById('create-post-form').addEventListener('submit', async (event) => {
     event.preventDefault();
   
@@ -71,4 +79,5 @@ async function getBlogPosts() {
   });
   
   // Load blog posts when the page loads
+  
   getBlogPosts().then(displayBlogPosts);
