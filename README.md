@@ -1,4 +1,4 @@
-    ##Agricultural product app.
+  Agricultural product app.
 The app is a simple Blog project, 10/04/2024
 By Scarlet Sarah
 
@@ -18,7 +18,7 @@ Its a simple blog app
   -Deployed Backend can be accessed here Blog
 
 ##Known Bugs
-   -The application images dissapears in heroku
+
    -Otherwise application works perfectly well, no bugs.
 
 ##Technologies used
